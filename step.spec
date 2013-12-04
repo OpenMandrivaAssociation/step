@@ -2,7 +2,7 @@
 
 Name:		step
 Summary:	Interactive physical simulator
-Version:	4.11.3
+Version:	4.11.4
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2 GFDL
@@ -45,6 +45,9 @@ you can not only learn but feel how physics works!
 %makeinstall_std -C build
 
 %changelog
+* Wed Dec 04 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.11.4-1
+- New version 4.11.4
+
 * Wed Nov 06 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.11.3-1
 - New version 4.11.3
 
