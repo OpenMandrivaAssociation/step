@@ -1,17 +1,17 @@
 %define eigen_version 2.0.3
 
-Name:		step
 Summary:	Interactive physical simulator
-Version:	4.13.3
-Release:	1
+Name:		step
+Version:	4.14.3
+Release:	2
+License:	GPLv2+
 Group:		Graphical desktop/KDE
-License:	GPLv2 GFDL
-URL:		http://edu.kde.org/step/
-Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+Url:		http://edu.kde.org/step/
+Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel
+BuildRequires:	pkgconfig(gsl)
 BuildRequires:	pkgconfig(eigen2) >= %{eigen_version}
 BuildRequires:	pkgconfig(libqalculate)
-BuildRequires:	pkgconfig(gsl)
 
 %description
 Step is an interactive physical simulator. It works like this:
@@ -24,12 +24,13 @@ you can not only learn but feel how physics works!
 
 %files
 %doc README AUTHORS ChangeLog COPYING COPYING.DOC DESIGN TODO
-%{_kde_bindir}/step
+%doc %{_kde_docdir}/HTML/en/step
 %{_kde_applicationsdir}/step.desktop
 %{_kde_appsdir}/step
-%{_kde_datadir}/config.kcfg/step.kcfg
+%{_kde_bindir}/step
 %{_kde_configdir}/step.knsrc
-%{_kde_docdir}/HTML/en/step
+%{_kde_datadir}/appdata/step.appdata.xml
+%{_kde_datadir}/config.kcfg/step.kcfg
 %{_kde_iconsdir}/hicolor/*/apps/step.png
 
 #----------------------------------------------------------------------
@@ -45,6 +46,16 @@ you can not only learn but feel how physics works!
 %makeinstall_std -C build
 
 %changelog
+* Tue Nov 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.3-1
+- New version 4.14.3
+
+* Wed Oct 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.2-1
+- New version 4.14.2
+
+* Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-1
+- New version 4.14.1
+- Update files
+
 * Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.3-1
 - New version 4.13.3
 
