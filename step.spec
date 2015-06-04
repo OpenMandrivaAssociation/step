@@ -2,7 +2,7 @@
 
 Summary:	Interactive physical simulator
 Name:		step
-Version:	15.04.0
+Version:	15.04.2
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
