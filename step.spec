@@ -9,6 +9,12 @@ Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/step/
 Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(KF5DocTools)
+BuildRequires:	cmake(KF5KHtml)
+BuildRequires:	cmake(KF5Config)
+BuildRequires:	cmake(KF5KDELibs4Support)
+BuildRequires:	cmake(KF5NewStuff)
+BuildRequires:	cmake(KF5Plotting)
 BuildRequires:	pkgconfig(gsl)
 BuildRequires:	pkgconfig(eigen2) >= %{eigen_version}
 BuildRequires:	pkgconfig(libqalculate)
