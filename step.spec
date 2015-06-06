@@ -1,5 +1,3 @@
-%define eigen_version 2.0.3
-
 Summary:	Interactive physical simulator
 Name:		step
 Version:	15.04.2
@@ -16,7 +14,7 @@ BuildRequires:	cmake(KF5KDELibs4Support)
 BuildRequires:	cmake(KF5NewStuff)
 BuildRequires:	cmake(KF5Plotting)
 BuildRequires:	pkgconfig(gsl)
-BuildRequires:	pkgconfig(eigen2) >= %{eigen_version}
+BuildRequires:	pkgconfig(eigen3)
 BuildRequires:	pkgconfig(libqalculate)
 
 %description
