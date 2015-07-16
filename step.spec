@@ -36,6 +36,10 @@ you can not only learn but feel how physics works!
 %{_datadir}/appdata/step.appdata.xml                                                                   
 %{_datadir}/config.kcfg/step.kcfg                                                                      
 %{_iconsdir}/hicolor/*/apps/step.png
+%{_iconsdir}/hicolor/22x22/actions/step_object_*
+%{_datadir}/step/examples/*
+%{_datadir}/step/objinfo/*
+%{_datadir}/step/tutorials/tutorial*
 
 #----------------------------------------------------------------------
 
