@@ -40,7 +40,7 @@ you can not only learn but feel how physics works!
 %{_datadir}/step/examples/*
 %{_datadir}/step/objinfo/*
 %{_datadir}/step/tutorials/tutorial*
-%{_inconsdir}/hicolor/22x22/actions/pointer.png
+%{_iconsdir}/hicolor/22x22/actions/pointer.png
 
 #----------------------------------------------------------------------
 
