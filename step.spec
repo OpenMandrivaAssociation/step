@@ -5,7 +5,7 @@ Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/step/
-Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5KHtml)
@@ -27,15 +27,15 @@ and see how this will change evolution of the experiment. With Step
 you can not only learn but feel how physics works!
 
 %files
-%doc README AUTHORS ChangeLog COPYING COPYING.DOC DESIGN TODO
-%doc %{_kde_docdir}/HTML/en/step
-%{_kde_applicationsdir}/step.desktop
-%{_kde_appsdir}/step
-%{_kde_bindir}/step
-%{_kde_configdir}/step.knsrc
-%{_kde_datadir}/appdata/step.appdata.xml
-%{_kde_datadir}/config.kcfg/step.kcfg
-%{_kde_iconsdir}/hicolor/*/apps/step.png
+%doc README AUTHORS ChangeLog COPYING COPYING.DOC DESIGN TODO                                          
+%doc %{_docdir}/HTML/en/step                                                                           
+%{_datadir}/applications/kde4/step.desktop                                                             
+%{_datadir}/apps/step                                                                                  
+%{_bindir}/step                                                                                        
+%{_datadir}/config/step.knsrc                                                                          
+%{_datadir}/appdata/step.appdata.xml                                                                   
+%{_datadir}/config.kcfg/step.kcfg                                                                      
+%{_iconsdir}/hicolor/*/apps/step.png
 
 #----------------------------------------------------------------------
 
