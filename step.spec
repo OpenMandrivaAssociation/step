@@ -29,10 +29,10 @@ you can not only learn but feel how physics works!
 %files
 %doc README AUTHORS ChangeLog COPYING COPYING.DOC DESIGN TODO                                          
 %doc %{_docdir}/HTML/en/step                                                                           
-%{_datadir}/applications/kde4/step.desktop                                                             
-%{_datadir}/apps/step                                                                                  
+%{_datadir}/applications/org.kde.step.desktop                                                             
+%{_datadir}/step/stepui.rc
 %{_bindir}/step                                                                                        
-%{_datadir}/config/step.knsrc                                                                          
+%{_sysconfdir}/xdg/step.knsrc                                                                          
 %{_datadir}/appdata/step.appdata.xml                                                                   
 %{_datadir}/config.kcfg/step.kcfg                                                                      
 %{_iconsdir}/hicolor/*/apps/step.png
