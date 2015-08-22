@@ -1,7 +1,7 @@
 Summary:	Interactive physical simulator
 Name:		step
-Version:	15.04.3
-Release:	2
+Version:	15.08.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/step/
@@ -33,7 +33,7 @@ you can not only learn but feel how physics works!
 %{_datadir}/step/stepui.rc
 %{_bindir}/step                                                                                        
 %{_sysconfdir}/xdg/step.knsrc                                                                          
-%{_datadir}/appdata/step.appdata.xml                                                                   
+%{_datadir}/appdata/org.kde.step.appdata.xml                                                                   
 %{_datadir}/config.kcfg/step.kcfg                                                                      
 %{_iconsdir}/hicolor/*/apps/step.png
 %{_iconsdir}/hicolor/22x22/actions/step_object_*
