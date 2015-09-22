@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   step-15.08.0.tar.xz: 210d68fcd2ba909971966cb4784d7f578eb907b4
+sources:
+  step-15.08.1.tar.xz: 2373e32bf34b535af9ef9a63ce5cc3cc08e37606
