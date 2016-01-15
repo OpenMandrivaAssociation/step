@@ -16,6 +16,7 @@ BuildRequires:	cmake(KF5Plotting)
 BuildRequires:	cmake(Qt5Qml)
 BuildRequires:  cmake(Qt5Quick)
 BuildRequires:  cmake(Qt5Test)
+BuildRequires:  cmake(Qt5OpenGL)
 BuildRequires:	pkgconfig(gsl)
 BuildRequires:	pkgconfig(eigen3)
 BuildRequires:	pkgconfig(libqalculate)
@@ -30,14 +31,14 @@ and see how this will change evolution of the experiment. With Step
 you can not only learn but feel how physics works!
 
 %files
-%doc README AUTHORS ChangeLog COPYING COPYING.DOC DESIGN TODO                                          
-%doc %{_docdir}/HTML/en/step                                                                           
-%{_datadir}/applications/org.kde.step.desktop                                                             
+%doc README AUTHORS ChangeLog COPYING COPYING.DOC DESIGN TODO
+%doc %{_docdir}/HTML/en/step
+%{_datadir}/applications/org.kde.step.desktop
 %{_datadir}/step/stepui.rc
-%{_bindir}/step                                                                                        
-%{_sysconfdir}/xdg/step.knsrc                                                                          
-%{_datadir}/appdata/org.kde.step.appdata.xml                                                                   
-%{_datadir}/config.kcfg/step.kcfg                                                                      
+%{_bindir}/step
+%{_sysconfdir}/xdg/step.knsrc
+%{_datadir}/appdata/org.kde.step.appdata.xml
+%{_datadir}/config.kcfg/step.kcfg
 %{_iconsdir}/hicolor/*/apps/step.png
 %{_iconsdir}/hicolor/22x22/actions/step_object_*
 %{_datadir}/step/examples/*
