@@ -1,6 +1,6 @@
 Summary:	Interactive physical simulator
 Name:		step
-Version:	17.04.2
+Version:	17.08.1
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -33,7 +33,6 @@ you can not only learn but feel how physics works!
 %files -f step.lang
 %doc README AUTHORS ChangeLog COPYING COPYING.DOC DESIGN TODO
 %{_datadir}/applications/org.kde.step.desktop
-%{_datadir}/step/stepui.rc
 %{_bindir}/step
 %{_sysconfdir}/xdg/step.knsrc
 %{_datadir}/metainfo/org.kde.step.appdata.xml
@@ -44,6 +43,8 @@ you can not only learn but feel how physics works!
 %{_datadir}/step/objinfo/*
 %{_datadir}/step/tutorials/tutorial*
 %{_iconsdir}/hicolor/22x22/actions/pointer.png
+%{_datadir}/kxmlgui5/step/stepui.rc
+%lang(nn) %{_datadir}/locale/nn/LC_SCRIPTS/step/step.js
 
 #----------------------------------------------------------------------
 
