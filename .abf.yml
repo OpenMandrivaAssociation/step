@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   step-17.12.1.tar.xz: 99932d6ea7d8279d15d87bedb875d0915bca28a7
+sources:
+  step-17.12.2.tar.xz: 9a15064a2c689eb0584d8488e0241d02217ce680
