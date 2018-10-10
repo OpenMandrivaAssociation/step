@@ -2,7 +2,7 @@
 
 Summary:	Interactive physical simulator
 Name:		step
-Version:	18.08.1
+Version:	18.08.2
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
