@@ -2,8 +2,8 @@
 
 Summary:	Interactive physical simulator
 Name:		step
-Version:	19.08.0
-Release:	2
+Version:	19.08.1
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/step/
@@ -42,6 +42,7 @@ you can not only learn but feel how physics works!
 %{_datadir}/config.kcfg/step.kcfg
 %{_iconsdir}/hicolor/*/apps/step.png
 %{_iconsdir}/hicolor/22x22/actions/step_object_*
+%{_datadir}/mime/packages/org.kde.step.xml
 %{_datadir}/step/examples/*
 %{_datadir}/step/objinfo/*
 %{_datadir}/step/tutorials/tutorial*
