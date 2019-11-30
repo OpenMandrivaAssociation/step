@@ -2,7 +2,7 @@
 
 Summary:	Interactive physical simulator
 Name:		step
-Version:	19.11.80
+Version:	19.11.90
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -48,6 +48,9 @@ you can not only learn but feel how physics works!
 %{_datadir}/step/examples/*
 %{_datadir}/step/objinfo/*
 %{_datadir}/step/tutorials/tutorial*
+%lang(fr) %{_datadir}/step/tutorials/fr
+%lang(nl) %{_datadir}/step/tutorials/nl
+%lang(uk) %{_datadir}/step/tutorials/uk
 %{_iconsdir}/hicolor/22x22/actions/pointer.png
 %{_datadir}/kxmlgui5/step/stepui.rc
 %lang(nn) %{_datadir}/locale/nn/LC_SCRIPTS/step/step.js
@@ -63,7 +66,7 @@ you can not only learn but feel how physics works!
 
 %install
 %ninja_install -C build
-%find_lang step --with-html
+%find_lang step --with-html --all-name
 TOP="$(pwd)"
 cd %{buildroot}
 find .%{_datadir}/locale -name "*.qm" |while read r; do
