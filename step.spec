@@ -2,12 +2,12 @@
 
 Summary:	Interactive physical simulator
 Name:		step
-Version:	19.11.90
+Version:	19.12.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/step/
-Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(Qt5Xml)
@@ -71,4 +71,7 @@ TOP="$(pwd)"
 cd %{buildroot}
 find .%{_datadir}/locale -name "*.qm" |while read r; do
 	echo "%%lang($(echo $r |cut -d/ -f5)) $(echo $r |cut -b2-)" >>${TOP}/step.lang
+done
+for i in .%{_datadir}/step/tutorials/*; do
+	echo "%%lang($(basename $i)) %{_datadir}/step/tutorials/$(basename $i)" >>${TOP}/step.lang
 done
