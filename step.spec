@@ -3,7 +3,7 @@
 Summary:	Interactive physical simulator
 Name:		step
 Version:	20.03.90
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/step/
