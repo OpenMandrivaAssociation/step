@@ -2,7 +2,7 @@
 
 Summary:	Interactive physical simulator
 Name:		step
-Version:	21.12.2
+Version:	22.03.80
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -47,10 +47,8 @@ you can not only learn but feel how physics works!
 %{_datadir}/mime/packages/org.kde.step.xml
 %{_datadir}/step/examples/*
 %{_datadir}/step/objinfo/*
-%{_datadir}/step/tutorials/tutorial*
-%lang(fr) %{_datadir}/step/tutorials/fr
-%lang(nl) %{_datadir}/step/tutorials/nl
-%lang(uk) %{_datadir}/step/tutorials/uk
+%dir %{_datadir}/step/tutorials
+%{_datadir}/step/tutorials/*.step
 %{_iconsdir}/hicolor/22x22/actions/pointer.png
 %{_datadir}/kxmlgui5/step/stepui.rc
 %lang(nn) %{_datadir}/locale/nn/LC_SCRIPTS/step/step.js
@@ -73,5 +71,6 @@ find .%{_datadir}/locale -name "*.qm" |while read r; do
 	echo "%%lang($(echo $r |cut -d/ -f5)) $(echo $r |cut -b2-)" >>${TOP}/step.lang
 done
 for i in .%{_datadir}/step/tutorials/*; do
+	echo $i |grep -qE '\.step$' && continue
 	echo "%%lang($(basename $i)) %{_datadir}/step/tutorials/$(basename $i)" >>${TOP}/step.lang
 done
