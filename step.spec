@@ -2,7 +2,7 @@
 
 Summary:	Interactive physical simulator
 Name:		step
-Version:	22.08.3
+Version:	22.12.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -36,7 +36,7 @@ and see how this will change evolution of the experiment. With Step
 you can not only learn but feel how physics works!
 
 %files -f step.lang
-%doc README AUTHORS ChangeLog COPYING COPYING.DOC DESIGN TODO
+%doc README AUTHORS ChangeLog DESIGN TODO
 %{_datadir}/applications/org.kde.step.desktop
 %{_bindir}/step
 %{_datadir}/knsrcfiles/step.knsrc
@@ -50,7 +50,6 @@ you can not only learn but feel how physics works!
 %dir %{_datadir}/step/tutorials
 %{_datadir}/step/tutorials/*.step
 %{_iconsdir}/hicolor/22x22/actions/pointer.png
-%{_datadir}/kxmlgui5/step/stepui.rc
 %lang(nn) %{_datadir}/locale/nn/LC_SCRIPTS/step/step.js
 
 #----------------------------------------------------------------------
