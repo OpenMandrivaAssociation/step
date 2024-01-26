@@ -3,7 +3,7 @@
 Summary:	Interactive physical simulator
 Name:		plasma6-step
 Version:	24.01.90
-Release:	2
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/step/
@@ -15,6 +15,7 @@ BuildRequires:	cmake(Qt6Svg)
 BuildRequires:	cmake(Qt6OpenGL)
 BuildRequires:	cmake(Qt6OpenGLWidgets)
 BuildRequires:	cmake(Qt6Test)
+BuildRequires:	cmake(Qt6LinguistTools)
 BuildRequires:	cmake(KF6Crash)
 BuildRequires:	cmake(KF6Config)
 BuildRequires:	cmake(KF6NewStuff)
