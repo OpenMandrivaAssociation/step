@@ -1,13 +1,20 @@
+%define git 20240218
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Summary:	Interactive physical simulator
 Name:		plasma6-step
-Version:	24.01.95
-Release:	1
+Version:	24.01.96
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org/step/
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/education/step/-/archive/%{gitbranch}/step-%{gitbranchd}.tar.bz2#/step-%{git}.tar.bz2
+%else
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/step-%{version}.tar.xz
+%endif
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF6DocTools)
 BuildRequires:	cmake(Qt6Xml)
@@ -59,7 +66,7 @@ you can not only learn but feel how physics works!
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n step-%{?git:master}%{!?git:%{version}}
+%autosetup -p1 -n step-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DQT_MAJOR_VERSION=6 \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
