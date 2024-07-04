@@ -5,7 +5,7 @@
 
 Summary:	Interactive physical simulator
 Name:		plasma6-step
-Version:	24.05.1
+Version:	24.05.2
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
