@@ -1,3 +1,4 @@
+%global optflags %{optflags} -Wno-missing-template-arg-list-after-template-kw
 #define git 20240218
 %define gitbranch release/24.02
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
@@ -5,7 +6,7 @@
 
 Summary:	Interactive physical simulator
 Name:		plasma6-step
-Version:	24.05.2
+Version:	24.08.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
