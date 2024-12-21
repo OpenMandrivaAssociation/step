@@ -72,6 +72,7 @@ you can not only learn but feel how physics works!
 %cmake \
 	-DQT_MAJOR_VERSION=6 \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
+	-DEigen3_DIR=%{_datadir}/cmake/eigen \
 	-G Ninja
 
 %build
