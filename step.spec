@@ -2,29 +2,32 @@
 
 Summary:	Interactive physical simulator
 Name:		step
-Version:	23.08.5
-Release:	2
+Version:	24.12.3
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		https://edu.kde.org/step/
+Url:		https://apps.kde.org/step/
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
-BuildRequires:	cmake(KF5DocTools)
-BuildRequires:	cmake(Qt5Xml)
-BuildRequires:	cmake(Qt5Svg)
-BuildRequires:	cmake(Qt5OpenGL)
-BuildRequires:	cmake(Qt5Test)
-BuildRequires:	cmake(KF5Crash)
-BuildRequires:	cmake(KF5KHtml)
-BuildRequires:	cmake(KF5Config)
-BuildRequires:	cmake(KF5KDELibs4Support)
-BuildRequires:	cmake(KF5NewStuff)
-BuildRequires:	cmake(KF5Plotting)
+BuildRequires:	cmake(KF6DocTools)
+BuildRequires:	cmake(Qt6Xml)
+BuildRequires:	cmake(Qt6Svg)
+BuildRequires:	cmake(Qt6OpenGL)
+BuildRequires:	cmake(Qt6Test)
+BuildRequires:	cmake(KF6Crash)
+#BuildRequires:	cmake(KF6KHtml)
+BuildRequires:	cmake(KF6Config)
+#BuildRequires:	cmake(KF6KDELibs4Support)
+BuildRequires:	cmake(KF6NewStuff)
+BuildRequires:	cmake(KF6Plotting)
 BuildRequires:	cmake(SharedMimeInfo)
 BuildRequires:	pkgconfig(shared-mime-info)
 BuildRequires:	pkgconfig(gsl)
 BuildRequires:	pkgconfig(eigen3)
 BuildRequires:	pkgconfig(libqalculate)
+
+BuildSystem:	cmake
+BuildOption:	-DQT_MAJOR_VERSION=6
 
 %description
 Step is an interactive physical simulator. It works like this:
@@ -54,22 +57,17 @@ you can not only learn but feel how physics works!
 
 #----------------------------------------------------------------------
 
-%prep
-%setup -q
-%cmake_kde5
+#install
+#ninja_install -C  _OMV_rpm_build
+#
+#find_lang step --with-html --all-name
+#TOP="$(pwd)"
+#cd %{buildroot}
+#find .%{_datadir}/locale -name "*.qm" |while read r; do
+#	echo "%%lang($(echo $r |cut -d/ -f5)) $(echo $r |cut -b2-)" >>${TOP}/step.lang
+#done
+#for i in .%{_datadir}/step/tutorials/*; do
+#	echo $i |grep -qE '\.step$' && continue
+#	echo "%%lang($(basename $i)) %{_datadir}/step/tutorials/$(basename $i)" >>${TOP}/step.lang
+#done
 
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang step --with-html --all-name
-TOP="$(pwd)"
-cd %{buildroot}
-find .%{_datadir}/locale -name "*.qm" |while read r; do
-	echo "%%lang($(echo $r |cut -d/ -f5)) $(echo $r |cut -b2-)" >>${TOP}/step.lang
-done
-for i in .%{_datadir}/step/tutorials/*; do
-	echo $i |grep -qE '\.step$' && continue
-	echo "%%lang($(basename $i)) %{_datadir}/step/tutorials/$(basename $i)" >>${TOP}/step.lang
-done
