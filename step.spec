@@ -6,7 +6,7 @@
 
 Summary:	Interactive physical simulator
 Name:		step
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -39,6 +39,13 @@ BuildRequires:	pkgconfig(gsl)
 BuildRequires:	pkgconfig(eigen3)
 BuildRequires:	pkgconfig(libqalculate)
 
+%rename plasma6-step
+
+BuildSystem:	cmake
+BuildOption:	-DQT_MAJOR_VERSION=6
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+BuildOption:	-DEigen3_DIR=%{_datadir}/cmake/eigen
+
 %description
 Step is an interactive physical simulator. It works like this:
 you place some bodies on the scene, add some forces such as gravity
@@ -65,27 +72,9 @@ you can not only learn but feel how physics works!
 %{_iconsdir}/hicolor/22x22/actions/pointer.png
 %lang(nn) %{_datadir}/locale/nn/LC_SCRIPTS/step/step.js
 
-#----------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n step-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DQT_MAJOR_VERSION=6 \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-DEigen3_DIR=%{_datadir}/cmake/eigen \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang step --with-html --all-name
+%install -a
 TOP="$(pwd)"
 cd %{buildroot}
-find .%{_datadir}/locale -name "*.qm" |while read r; do
-	echo "%%lang($(echo $r |cut -d/ -f6)) $(echo $r |cut -b2-)" >>${TOP}/step.lang
-done
 for i in .%{_datadir}/step/tutorials/*; do
 	echo $i |grep -qE '\.step$' && continue
 	echo "%%lang($(basename $i)) %{_datadir}/step/tutorials/$(basename $i)" >>${TOP}/step.lang
