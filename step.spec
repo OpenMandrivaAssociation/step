@@ -6,7 +6,7 @@
 
 Summary:	Interactive physical simulator
 Name:		step
-Version:	25.08.3
+Version:	25.12.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -47,7 +47,6 @@ BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 BuildOption:	-DEigen3_DIR=%{_datadir}/cmake/eigen
 
 %patchlist
-step-25.08.3-compile.patch
 
 %description
 Step is an interactive physical simulator. It works like this:
